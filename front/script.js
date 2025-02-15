@@ -61,7 +61,6 @@ function deleteLogement(reference) {
     fetch(`${API_URL}/delete/${reference}`, { method: "DELETE" })
         .then(response => response.text())
         .then(message => {
-            alert(message);
             fetchLogements();
         })
         .catch(error => console.error("Erreur lors de la suppression:", error));
