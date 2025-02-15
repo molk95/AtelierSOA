@@ -8,14 +8,13 @@
     <script>
 
         const rendezVousList = [
-            { id: 1, date: "2025-02-15", heure: "10:00", logement: { reference: 101, name: "Appartement 1" }, numTel: "123456789" },
-            { id: 2, date: "2025-02-16", heure: "12:00", logement: { reference: 102, name: "Appartement 2" }, numTel: "987654321" }
+
         ];
 
 
         function displayRendezVous() {
             const listContainer = document.getElementById("rendezvousList");
-            listContainer.innerHTML = ""; // Clear existing list
+            listContainer.innerHTML = "";
             rendezVousList.forEach(rdv => {
                 const div = document.createElement("div");
                 div.innerHTML = `ID: ${rdv.id}, Date: ${rdv.date}, Heure: ${rdv.heure}, Logement: ${rdv.logement.name}, Tel: ${rdv.numTel} 
@@ -57,7 +56,6 @@
                 displayRendezVous();
             }
         }
-
 
         window.onload = () => {
             displayRendezVous();
